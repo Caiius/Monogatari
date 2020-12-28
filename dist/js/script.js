@@ -86,31 +86,7 @@ monogatari.script ({
 	'Start': [
 		'show scene #f7f6f6 with fadeIn',
 		'show notification Welcome',
-		{
-			'Input': {
-				'Text': 'What is your name?',
-				'Validation': function (input) {
-					return input.trim ().length > 0;
-				},
-				'Save': function (input) {
-					this.storage ({
-						player: {
-							name: input
-						}
-					});
-					return true;
-				},
-				'Revert': function () {
-					this.storage ({
-						player: {
-							name: ''
-						}
-					});
-				},
-				'Warning': 'You must enter a name!'
-			}
-		},
-		'y Hi {{player.name}} Welcome to Monogatari!',
+		'y Hi, Welcome to Monogatari!',
 		{
 			'Choice': {
 				'Dialog': 'y Have you already read some documentation?',
